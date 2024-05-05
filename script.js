@@ -1,5 +1,25 @@
 function makeid(l) {
   // write your code here
+	let str="";
+
+	for(let i=0; i<l;i++){
+		str+=String.fromCharCode(generateNum());
+		
+	}
+
+	return str;
+}
+
+
+function generateNum(){
+
+	let num = parseInt(Math.random() * 100);
+	if((num >= 48 && num <= 57) || (num >= 65 && num <= 90) || (num >= 97 && num <= 99)){
+		return num;
+	}
+
+	return 100 + parseInt(num/5);
+	
 }
 
 // Do not change the code below.
